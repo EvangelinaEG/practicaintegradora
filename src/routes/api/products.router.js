@@ -1,5 +1,6 @@
-const { Router } = require('express')
-const { ProductsManagerFS, ProductsManagerMongo } = require('../../daos/productsMongo.manager.js')
+import { Router } from 'express';
+//import  ProductsManagerFS  from '../../daos/productsMongo.manager.js';
+import  ProductsManagerMongo  from '../../daos/productsMongo.manager.js';
 
 const productsManager = new ProductsManagerMongo();
 const productsRouter = Router()

@@ -4,11 +4,12 @@ import handlebars from 'express-handlebars'
 import viewsRouter from './routes/views.router.js'
 import productsRouter from './routes/api/products.router.js'
 import  connectDB  from './config/index.js'
-import  { productsSocket } from './utils/productsSocket.js'
+import  productsSocket from './utils/productsSocket.js'
+import { __dirname } from './utils/utils.js'
 // socket io
 import { Server } from 'socket.io'
 const app = express()
-//const PORT = process.env.PORT || 2043
+const PORT = process.env.PORT || 8080
 
 const httpServer = app.listen(PORT, error => {
     if(error) console.log(error)
